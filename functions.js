@@ -1,9 +1,16 @@
 /**
- * Converts a number a string.
+ * Converts a number to a string.
  * @param {number} n
  * @return {string} the number as a string
  */
 
+function numberToString ( n ) {
+        var convertNumber = n.toString( );
+        return convertNumber;
+
+}
+
+numberToString ( 5 );
 
 /**
  * Adds one to a given number.
@@ -11,6 +18,13 @@
  * @return {number}
  */
 
+ function increase ( n ) {
+        var newNum = n + 1;
+        return newNum;
+
+ }
+
+ increase ( 11 );
 
 /**
  * Subtracts one from a given number.
@@ -18,6 +32,13 @@
  * @return {number}
  */
 
+function decrease ( n ) {
+        var newNum = n - 1;
+        return newNum;
+
+}
+
+decrease ( 9 );
 
 /**
  * Adds two numbers.
@@ -25,6 +46,14 @@
  * @param {number} y
  * @return {number} the sum
  */
+
+ function add ( x, y ) {
+        var sum = x + y;
+        return sum;
+
+ }
+
+ add ( 12, 9 );
 
 
 /**
@@ -34,6 +63,13 @@
  * @return {number} the difference
  */
 
+ function subtract ( x, y ) {
+        var difference = x - y;
+        return difference;
+
+ }
+
+ subtract ( 10, 5 );
 
 /**
  * Multiplies two numbers.
@@ -42,6 +78,13 @@
  * @return {number} the product
  */
 
+ function multiply ( x, y ) {
+        var product = x * y;
+        return product;
+
+ }
+
+ multiply ( 3, 5 );
 
 /**
  * Divides the first number by the second.
@@ -50,12 +93,29 @@
  * @return {number} the quotient
  */
 
+ function divide ( x, y ) {
+        var quotient = x / y;
+        return quotient;
+
+ }
+
+ divide ( 15, 3 );
+
 
 /**
  * Multiplies a number by itself.
  * @param {number} x, number to be squared
  * @return {number} squared
  */
+
+ function square ( x ) {
+        var getSquare = x * x;
+        return getSquare;
+
+ }
+
+ square ( 14 );
+ console.log( square ( 14 )  );
 
 
 /**
@@ -67,6 +127,41 @@
  * @return {number} the result
  */
 
+ function calculate ( operation, x, y ) {
+         var expression;
+         var writtenExpression;
+        switch ( operation ) {
+                case 'add':
+                        expression = x + y;
+                        writtenExpression = `${ x } + ${ y } = ${ expression }`;
+                        break;
+                case 'subtract':
+                        expression = x - y;
+                        writtenExpression = `${ x } - ${ y } = ${ expression }`;
+                        break;
+                case 'multiply':
+                        expression = x * y;
+                        writtenExpression = `${ x } * ${ y } = ${ expression }`;
+                        break;
+                case 'divide':
+                        expression = x / y;
+                        writtenExpression = `${ x } / ${ y } = ${ expression }`;
+                        break;
+                default:
+                        expression = 0;
+                        writtenExpression = 'Case is default. No written expression.';
+                        break;                      
+
+        }
+        console.log( `The operation is ${ operation }` );
+        console.log( `The expression is ${ expression }` );
+        console.log( `The written expression is ${ writtenExpression }`);
+        console.log( writtenExpression );
+        return expression;
+
+ }
+
+ calculate ( 'add', 4, 7 );
 
 /**
  * Returns true if `a` is greater than `b`.
@@ -75,6 +170,13 @@
  * @return {boolean} `a` is larger than `b`
  */
 
+function isGreaterThan ( a, b) {
+        if ( a > b ) {
+                return 'true, \'a\' is greater than \'b\'';
+
+        }
+
+}
 
 /**
  * Returns true if `a` is less than `b`.
